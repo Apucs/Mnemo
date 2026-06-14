@@ -2,7 +2,7 @@ export interface Tile {
   id: string;
   parentId: string | null;
   boardId: string;
-  type: 'text' | 'code' | 'latex' | 'image' | 'pdf' | 'container';
+  type: 'text' | 'code' | 'latex' | 'image' | 'pdf' | 'link' | 'container';
   content: string;
   meta: Record<string, any>;
   position: { x: number; y: number };

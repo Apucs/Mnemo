@@ -1,0 +1,67 @@
+{
+  "id": "example-paper-breakdown",
+  "title": "Research Paper Breakdown",
+  "tiles": {
+    "p1": {
+      "id": "p1",
+      "parentId": null,
+      "boardId": "example-paper-breakdown",
+      "type": "text",
+      "content": "<h2>Attention Is All You Need</h2><p><em>Vaswani et al., 2017</em></p><p>This paper introduces the <strong>Transformer</strong> architecture, which relies entirely on attention mechanisms, dispensing with recurrence and convolutions.</p>",
+      "meta": {},
+      "position": { "x": 40, "y": 40 },
+      "size": { "width": 380, "height": 220 },
+      "zIndex": 0,
+      "gridSnap": true,
+      "createdAt": "2026-01-01T00:00:00Z",
+      "updatedAt": "2026-01-01T00:00:00Z"
+    },
+    "p2": {
+      "id": "p2",
+      "parentId": null,
+      "boardId": "example-paper-breakdown",
+      "type": "latex",
+      "content": "\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V",
+      "meta": {},
+      "position": { "x": 460, "y": 40 },
+      "size": { "width": 380, "height": 140 },
+      "zIndex": 1,
+      "gridSnap": true,
+      "createdAt": "2026-01-01T00:00:00Z",
+      "updatedAt": "2026-01-01T00:00:00Z"
+    },
+    "p3": {
+      "id": "p3",
+      "parentId": null,
+      "boardId": "example-paper-breakdown",
+      "type": "text",
+      "content": "<h3>Key Contributions</h3><ul><li><strong>Self-attention</strong> replaces RNN/CNN for sequence modeling</li><li><strong>Multi-head attention</strong> allows attending to different representation subspaces</li><li><strong>Positional encoding</strong> injects sequence order information</li><li>Achieves SOTA on WMT translation with less training time</li></ul>",
+      "meta": {},
+      "position": { "x": 40, "y": 300 },
+      "size": { "width": 380, "height": 240 },
+      "zIndex": 2,
+      "gridSnap": true,
+      "createdAt": "2026-01-01T00:00:00Z",
+      "updatedAt": "2026-01-01T00:00:00Z"
+    },
+    "p4": {
+      "id": "p4",
+      "parentId": null,
+      "boardId": "example-paper-breakdown",
+      "type": "code",
+      "content": "import torch\nimport torch.nn as nn\nimport math\n\nclass ScaledDotProductAttention(nn.Module):\n    def forward(self, Q, K, V):\n        d_k = Q.size(-1)\n        scores = torch.matmul(Q, K.transpose(-2, -1)) / math.sqrt(d_k)\n        attn = torch.softmax(scores, dim=-1)\n        return torch.matmul(attn, V)",
+      "meta": { "language": "python" },
+      "position": { "x": 460, "y": 220 },
+      "size": { "width": 400, "height": 280 },
+      "zIndex": 3,
+      "gridSnap": true,
+      "createdAt": "2026-01-01T00:00:00Z",
+      "updatedAt": "2026-01-01T00:00:00Z"
+    }
+  },
+  "rootTileIds": ["p1", "p2", "p3", "p4"],
+  "gridSettings": { "snapEnabled": true, "gridSize": 20 },
+  "theme": "light",
+  "createdAt": "2026-01-01T00:00:00Z",
+  "updatedAt": "2026-01-01T00:00:00Z"
+}
